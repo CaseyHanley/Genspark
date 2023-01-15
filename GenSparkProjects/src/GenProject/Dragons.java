@@ -1,5 +1,7 @@
 package GenProject;
 
+import java.util.Scanner;
+
 public class Dragons {
 
     public int DragonsCave(){
@@ -17,23 +19,48 @@ public class Dragons {
         //Spacing
         System.out.println("");
         System.out.println("");
-        int answer;
+
+
+        int answer = 0;
+        Scanner scan = new Scanner(System.in);
+
         //Make input function
+        while(answer != 1 && answer != 2){
+            answer = scan.nextInt();
+        }
+
+        switch (answer){
+            case 1: Eaten();break;
+            case 2: Gold();
+        }
 
         //Spacing
         System.out.println("");
         System.out.println("");
 
-        //Make if(answer == 1){}
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
 
 
 
 
         return 0;
+    }
+
+    private void Gold() {
+    }
+
+    private void Eaten() {
+        //Make if(answer == 1){}
+        System.out.println("You approach the cave...");
+        System.out.println();
+        System.out.println("It is dark and spooky...");
+        System.out.println();
+        System.out.println("A large dragon jumps out in front of you! He opens his jaws and...");
+        System.out.println();
+        System.out.println("Gobbles you down in one bite!");
+        System.out.println("");
+
+
+
     }
 
 }
