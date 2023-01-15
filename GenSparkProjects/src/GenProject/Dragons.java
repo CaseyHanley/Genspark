@@ -29,6 +29,10 @@ public class Dragons {
             answer = scan.nextInt();
         }
 
+        //Spacing
+        System.out.println("");
+        System.out.println("");
+
         switch (answer){
             case 1: Eaten();break;
             case 2: Gold();
@@ -57,7 +61,7 @@ public class Dragons {
         System.out.println("A large dragon jumps out in front of you! He opens his jaws and...");
         System.out.println();
         System.out.println("Gobbles you down in one bite!");
-        System.out.println("");
+        System.out.println();
 
 
 
