@@ -1,10 +1,10 @@
 package GenProject;
 
 public class Main {
-    public static int main(String[] args) {
+    public static void main(String[] args) {
         Dragons dargon = new Dragons();
 
-        return dargon.DragonsCave();
+        dargon.DragonsCave();
 
     }
 }
