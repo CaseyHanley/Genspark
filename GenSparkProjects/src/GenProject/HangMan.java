@@ -82,7 +82,7 @@ try {
             if (guessedLetter.equals("n")){
                 play = false;}
 
-        }while(guessedLetter != "y" || guessedLetter != "n");
+        }while(!guessedLetter.equals("y") && !guessedLetter.equals("n"));
         return play;
     }
 
