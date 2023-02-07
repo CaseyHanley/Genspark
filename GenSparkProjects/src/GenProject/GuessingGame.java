@@ -5,9 +5,16 @@ import java.util.Scanner;
 
 public class GuessingGame {
 
+
+    public String Username = "";
+    public int guessedNum = 0;
+
+    public int turn = 0;
+    public int guessTheNumber = 0;
+
     public void Game(){
 
-        String Username = "";
+
         Scanner scan = new Scanner(System.in);
 
         System.out.println("What is your name?\n\n");
@@ -17,32 +24,23 @@ public class GuessingGame {
         System.out.printf("Well, %s, I am thinking of a number between 1 and 20.\nTake a Guess.", Username);
 
         guess(Username);
-
-
-
-
-
-
     }
 
-    private void guess(String Username) {
+    public void guess(String Username) {
 
-        int guessedNum = 0;
-        Random rand = new Random();
-        guessedNum = rand.nextInt(1,20);
+        guessedNum = randNumGen();
 
-        int turn = 0;
-        int guessing = 0;
+
         Scanner scanning = new Scanner(System.in);
 
         do {
-            System.out.printf("Take a guess");
+            System.out.print("Take a guess");
 
-            guessing = scanning.nextInt();
+            guessTheNumber = scanning.nextInt();
 
 
-            if (guessing == guessedNum){
-                System.out.printf("Good job, %s! you guessed my number in %i guesses!", Username, (turn+1));
+            if (guessTheNumber == guessedNum){
+                System.out.printf("Good job, %s! you guessed my number in %d guesses!", Username, (turn+1));
             System.out.println();
             System.out.println("Would you like to play again? (y or n)");
             String yesOrNo = scanning.next();
@@ -51,8 +49,8 @@ public class GuessingGame {
 
             }
 
-            if (guessing < guessedNum){System.out.println("Your guess is too low."); }
-            if (guessing > guessedNum){System.out.println("Your guess is too high."); }
+            if (guessTheNumber < guessedNum){System.out.println("Your guess is too low."); }
+            if (guessTheNumber > guessedNum){System.out.println("Your guess is too high."); }
 
 
             turn++;
@@ -66,13 +64,19 @@ public class GuessingGame {
             }
 
 
-        }while(guessing != guessedNum && turn <6);
+        }while(guessTheNumber != guessedNum && turn <6);
 
 
 
 
 
 
+    }
+
+    public int randNumGen() {
+        Random rand = new Random();
+
+        return rand.nextInt(1, 20);
     }
 
 

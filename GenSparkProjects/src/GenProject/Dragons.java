@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class Dragons {
 
+
+    public int answer = 0;
+
     public int DragonsCave(){
 
         //Output Story:
@@ -21,7 +24,7 @@ public class Dragons {
         System.out.println("");
 
 
-        int answer = 0;
+
         Scanner scan = new Scanner(System.in);
 
         //Make input function
